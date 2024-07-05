@@ -58,31 +58,31 @@
     function textBuilder(years, months, days, hours, minutes, seconds, milliseconds) {
         let result = []
         if(years) {
-            result.push(`${years} ${years > 1 ? "anos" : "ano"}`)
+            result.push(`${years} ${years > 1 ? "years" : "year"}`)
         }
         if(months) {
-            result.push(`${months} ${months > 1 ? "meses" : "mes"}`)
+            result.push(`${months} ${months > 1 ? "months" : "month"}`)
         }
         if(days) {
-            result.push(`${days} ${days > 1 ? "dias" : "dia"}`)
+            result.push(`${days} ${days > 1 ? "days" : "day"}`)
         }
         if(hours) {
-            result.push(`${hours} ${hours > 1 ? "horas" : "hora"}`)
+            result.push(`${hours} ${hours > 1 ? "hours" : "hour"}`)
         }
         if(minutes) {
-            result.push(`${minutes} ${minutes > 1 ? "minutos" : "minuto"}`)
+            result.push(`${minutes} ${minutes > 1 ? "minutes" : "minute"}`)
         }
         if(seconds) {
-            result.push(`${seconds} ${seconds > 1 ? "segundos" : "segundo"}`)
+            result.push(`${seconds} ${seconds > 1 ? "seconds" : "second"}`)
         }
         if(milliseconds) {
-            result.push(`${milliseconds.toString().padStart(3, "0")} milisegundos`)
+            result.push(`${milliseconds.toString().padStart(3, "0")} milliseconds`)
         }
         result = result.join(", ")
-        if(!result) return "CONCLUÍDO"
+        if(!result) return "COMPLETED"
         let last = result.lastIndexOf(", ")
         if(last < 0) return result
-        return `${result.substring(0, last)} e ${result.substring(last + 2)}.`
+        return `${result.substring(0, last)} and ${result.substring(last + 2)}.`.toUpperCase()
     }
     
     let intervalo
