@@ -86,15 +86,13 @@
     }
     
     let intervalo
-
     input.addEventListener("change", function() {
         clearInterval(intervalo)
         // GETTING DATA FROM THE DOM
         const [year, month, day] = input.value.split("-")
-        const [hour, minute] = [10, 50]
     
         // GETTING TIMESTAMP VALUES
-        let referenceDate = new Date(year, month - 1, day, hour, minute).getTime()
+        let referenceDate = new Date(year, month - 1, day).getTime()
         let todayDate = new Date().getTime()
     
     
